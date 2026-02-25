@@ -109,7 +109,9 @@ class BeforeAfterRunner:
             try:
                 import openai
 
-                return openai.OpenAI()
+                return openai.OpenAI(
+                    api_key=os.environ.get("OPENAI_API_KEY", "no-key-required"),
+                )
             except ImportError as e:
                 raise ImportError(
                     "openai package required. Install with: pip install openai"

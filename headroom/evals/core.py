@@ -186,7 +186,7 @@ class EvalSuiteResult:
         if self.avg_semantic_similarity is not None:
             lines.append(f"Semantic Similarity: {self.avg_semantic_similarity:.3f}")
         lines.append(
-            f"Tokens: {self.total_original_tokens:,} → {self.total_compressed_tokens:,} "
+            f"Tokens: {self.total_original_tokens:,} -> {self.total_compressed_tokens:,} "
             f"({self.total_tokens_saved:,} saved)"
         )
         return "\n".join(lines)
